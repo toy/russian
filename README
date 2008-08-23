@@ -1,0 +1,20 @@
+Russian
+=======
+
+String methods to ease work with russian language
+transliterate
+to_string_for_url
+
+Example
+=======
+
+'целая куча букв'.transliterate # => 'tselaya kucha bukv'
+'ЦЕЛАЯ КУЧА БУКВ'.transliterate # => 'TSELAYA KUCHA BUKV'
+'Целая Куча Букв'.transliterate # => 'Tselaya Kucha Bukv'
+'цЕлАя кУчА БуКв'.transliterate # => 'tsElAya kUchA BuKv'
+'tsЕлАя kУчA BуKв'.transliterate # => 'tsElAya kUchA BuKv'
+
+'целая куча букв'.to_string_for_url # => 'tselaya-kucha-bukv'
+'ЦЕЛАЯ КУЧА БУКВ'.to_string_for_url # => 'tselaya-kucha-bukv'
+'слово - целая куча букв'.to_string_for_url # => 'slovo-tselaya-kucha-bukv'
+'куча !"№%:,.;()_+ символов'.to_string_for_url # => 'kucha-_-simvolov'
