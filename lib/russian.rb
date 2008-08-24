@@ -29,7 +29,7 @@ class String
     end
   end
 
-  def to_string_for_url
+  def for_url
     chars.
     downcase.
     to_s.

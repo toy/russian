@@ -32,12 +32,12 @@ describe String, 'transliterate' do
   end
 end
 
-describe String, 'to_string_for_url' do
+describe String, 'for_url' do
   it "should make good string for url" do
-    ''.to_string_for_url.should == ''
-    'целая куча букв'.to_string_for_url.should == 'tselaya-kucha-bukv'
-    'ЦЕЛАЯ КУЧА БУКВ'.to_string_for_url.should == 'tselaya-kucha-bukv'
-    'слово - целая куча букв'.to_string_for_url.should == 'slovo-tselaya-kucha-bukv'
-    'куча !"№%:,.;()_+ символов'.to_string_for_url.should == 'kucha-_-simvolov'
+    ''.for_url.should == ''
+    'целая куча букв'.for_url.should == 'tselaya-kucha-bukv'
+    'ЦЕЛАЯ КУЧА БУКВ'.for_url.should == 'tselaya-kucha-bukv'
+    'слово - целая куча букв'.for_url.should == 'slovo-tselaya-kucha-bukv'
+    'куча !"№%:,.;()_+ символов'.for_url.should == 'kucha-_-simvolov'
   end
 end

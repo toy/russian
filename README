@@ -3,7 +3,7 @@ Russian
 
 String methods to ease work with russian language
 transliterate
-to_string_for_url
+for_url
 
 Example
 =======
@@ -14,7 +14,7 @@ Example
 'цЕлАя кУчА БуКв'.transliterate # => 'tsElAya kUchA BuKv'
 'tsЕлАя kУчA BуKв'.transliterate # => 'tsElAya kUchA BuKv'
 
-'целая куча букв'.to_string_for_url # => 'tselaya-kucha-bukv'
-'ЦЕЛАЯ КУЧА БУКВ'.to_string_for_url # => 'tselaya-kucha-bukv'
-'слово - целая куча букв'.to_string_for_url # => 'slovo-tselaya-kucha-bukv'
-'куча !"№%:,.;()_+ символов'.to_string_for_url # => 'kucha-_-simvolov'
+'целая куча букв'.for_url # => 'tselaya-kucha-bukv'
+'ЦЕЛАЯ КУЧА БУКВ'.for_url # => 'tselaya-kucha-bukv'
+'слово - целая куча букв'.for_url # => 'slovo-tselaya-kucha-bukv'
+'куча !"№%:,.;()_+ символов'.for_url # => 'kucha-_-simvolov'
