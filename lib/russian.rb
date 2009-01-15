@@ -8,7 +8,7 @@ class String
 
   def transliterate
     gsub(/\w+/) do |word|
-      mb_word = word.chars
+      mb_word = word.mb_chars
       mb_word_tr = mb_word.split(//).collect do |c|
         TRANSLITERATE_TABLE[c.downcase.to_s] || c
       end.join
@@ -30,11 +30,8 @@ class String
   end
 
   def for_url
-    chars.
-    downcase.
-    to_s.
-    transliterate.
-    strip.
+    mb_chars.downcase.to_s.
+    transliterate.strip.
     gsub(/\s/, '-').
     gsub(/-{2,}/, '-').
     gsub(/[^a-z0-9'_\-]/, '')
